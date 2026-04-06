@@ -1,5 +1,4 @@
 import path from 'node:path';
-import fs from 'node:fs/promises';
 import {configGet} from './steps/config-get.js';
 import {resetActions} from './steps/reset-actions.js';
 import {searchActionNames} from './steps/search-action-names.js';
