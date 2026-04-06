@@ -13,9 +13,10 @@ const xoConfig = [
 		name: 'project-rules',
 		rules: {
 			'capitalized-comments': 'off',
-			'jsdoc/require-description': 'off',
 			'jsdoc/require-param': 'error',
 			'jsdoc/require-returns': 'error',
+			'jsdoc/require-description': 'off',
+			'jsdoc/require-param-description': 'off',
 			'jsdoc/require-returns-description': 'off',
 		},
 	},
