@@ -14,17 +14,17 @@ import camelCase from 'lodash.camelcase';
 export async function publishAction({outPath, actionName, docComment, inputName, notice}) {
 	const actionNameCamel = camelCase(actionName);
 	const code = `${notice}
-	
-	import api from '../../utils/api.js';
-	
-	${docComment}
-	export async function ${actionNameCamel}(${inputName}) {
-		return api.post({
-			action: '${actionName}',
-			payload: ${inputName || 'null'},
-		});
-	}
-	`;
+
+import api from '../../utils/api.js';
+
+${docComment}
+export async function ${actionNameCamel}(${inputName}) {
+	return api.post({
+		action: '${actionName}',
+		payload: ${inputName || 'null'},
+	});
+}
+`;
 
 	await fs.mkdir(path.dirname(outPath), {recursive: true});
 	await fs.writeFile(outPath, code, 'utf8');
