@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import camelCase from 'lodash.camelcase';
 
 /**
  * @param {object} input
@@ -11,12 +12,13 @@ import path from 'node:path';
  * @returns {Promise<string>} code
  */
 export async function publishAction({outPath, actionName, docComment, inputName, notice}) {
+	const actionNameCamel = camelCase(actionName);
 	const code = `${notice}
 	
 	import api from '../../utils/api.js';
 	
 	${docComment}
-	export async function ${actionName}(${inputName}) {
+	export async function ${actionNameCamel}(${inputName}) {
 		return api.post({
 			action: '${actionName}',
 			payload: ${inputName || 'null'},

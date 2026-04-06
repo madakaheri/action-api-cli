@@ -11,7 +11,7 @@ import path from 'node:path';
 export async function publishActionsIndex({outPath, actionNames, notice}) {
 	const code = `${notice}
 
-${actionNames.map(actionName => `export {${actionName}} from './${actionName}/index.js';`).join('\n')}
+${actionNames.map(actionName => `export * from './${actionName}/index.js';`).join('\n')}
 `;
 
 	await fs.mkdir(path.dirname(outPath), {recursive: true});

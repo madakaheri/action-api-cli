@@ -18,7 +18,12 @@
     "test": "node --test",
     "prepublishOnly": "npm run format && npm run build"
   },
+  "dependencies": {
+    "esprima-next": "^6.0.3",
+    "lodash.camelcase": "^4.3.0"
+  },
   "devDependencies": {
+    "@types/lodash.camelcase": "^4.3.9",
     "@types/node": "^25.5.2",
     "eslint-plugin-jsdoc": "^62.9.0",
     "typescript": "^6.0.2",
@@ -39,8 +44,5 @@
     "cli"
   ],
   "author": "Madakaheri",
-  "license": "MIT",
-  "dependencies": {
-    "esprima-next": "^6.0.3"
-  }
+  "license": "MIT"
 }
