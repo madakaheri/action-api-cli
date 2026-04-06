@@ -1,5 +1,5 @@
 {
-  "name": "@madakaheri/action-api-cli",
+  "name": "action-api-cli",
   "version": "0.1.0",
   "description": "Action API CLI",
   "main": "main.js",
