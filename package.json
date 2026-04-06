@@ -1,7 +1,7 @@
 {
   "name": "@madakaheri/action-api-cli",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Action API CLI",
   "main": "main.js",
   "bin": {
     "action-api": "./main.js"
